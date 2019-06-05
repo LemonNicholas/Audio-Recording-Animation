@@ -1,15 +1,12 @@
-package com.varunjohn1990.audiorecordingview;
+package com.lemon.library;
 
 import android.animation.Animator;
-import android.app.Activity;
 import android.content.Context;
-import android.media.Image;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.MotionEvent;
 import android.view.View;
@@ -21,7 +18,6 @@ import android.view.animation.OvershootInterpolator;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import java.text.SimpleDateFormat;
@@ -206,7 +202,7 @@ public class AudioRecordView extends FrameLayout {
             }
         });
 
-        imageViewAudio.setOnTouchListener(new View.OnTouchListener() {
+        imageViewAudio.setOnTouchListener(new OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
 
@@ -290,7 +286,7 @@ public class AudioRecordView extends FrameLayout {
             }
         });
 
-        imageViewStop.setOnClickListener(new View.OnClickListener() {
+        imageViewStop.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 isLocked = false;
